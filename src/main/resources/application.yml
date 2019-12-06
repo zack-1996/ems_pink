@@ -1,0 +1,20 @@
+server:
+  port: 8989
+  context-path: /ems_pink
+  jsp-servlet:
+    init-parameters:
+      develepment: true
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ems
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:zt/mapper/*Mapper.xml
+  type-aliases-package: zt.entity
